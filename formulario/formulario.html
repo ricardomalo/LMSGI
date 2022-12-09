@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Contacto</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Formulario de Contacto</legend>
+ 
+<p>
+        <label>
+          Tipo de Consulta
+          <br />
+          <select name="tipodeconsulta">
+            <option>--Selecciona una opción--</option>
+            <option>General</option>
+            <option>Información</option>
+            <option>E.S.O.</option>
+            <option>Bachillerato</option>
+            <option>Formación Profesional</option>
+          </select>
+        </label>
+      </p>
+ 
+<p>
+        <label>Nombre: <input name="nombre" /></label>
+      </p>
+
+<p>
+        <label>Primer Apellido: <input name="apellido1" /></label>
+      </p>
+
+<p>
+        <label>Segundo Apellido: <input name="apellido2" /></label>
+      </p>      
+
+<p>
+        <label for="email">EMail de Contacto:</label>
+        <input type="email" name="email" id="email" placeholder="ejemplo@ejemplo.com"
+        pattern=".+\@.+\..+" size="40" minlength="6" maxlength="64" required>  <!-- Minimo 6 y máximo 64 caracteres. Debe tener formato "algo@algo.algo"-->       
+      </p>       
+
+<p>
+        <label for="telefono">Teléfono de contacto:</label>
+        <input type="tel" id="telefono" name="telefono"  placeholder="987654321"
+        pattern="[0-9]{9}" size="9" minlength="9" maxlength="9" required>  <!-- Minimo y máximo 9 digitos con números del 0 al 9-->    
+        <small>Introduce tu telefóno móvil o fijo</small> 
+      </p>      
+  
+<p>
+        <label>Eres Estudiante del Centro:</label>
+        <label><input type="radio" name="estudiante" value="si" /> Si</label>
+        <label><input type="radio" name="estudiante" value="no" /> No</label>
+      </p>
+ 
+<p>
+        <label for="fechamatricula">Fecha de Matricula:</label>
+        <input type="date" id="fechamatricula" name="fechamatricula"
+               value="2022-09-01" 
+               min="2015-01-01" max="2022-12-31"> <!-- Valor mostrado 2022-09-01. Permite introducir una fecha entre el 2015-01-01 y el 2022-12-31-->
+      </p>
+ 
+<p>
+        <label>
+          Mensaje:
+          <br />
+          <textarea name="mensaje" cols="65" rows="10" required
+          placeholder="Escriba aquí su mensaje."></textarea>
+        </label>
+      </p>
+ 
+<p>
+        <form method="get" action="http://webdestino.com/datos.php"></form>  <!-- Los datos del formulario se envían (metodo "get") a la web que se 
+          indica ("action"). En vez de la web se podría indicar un fichero (con su ruta) donde se enviaría la información del formulario. -->
+        <button name="envio" type="submit">Enviar</button>
+        <button name="reiniciar" type="reset">Reiniciar</button>
+      </p>
+ 
+      <!-- BOTONES:
+            - type="submit" envía automáticamente el formulario en que se encuentra cuando es presionado. Es decir, cuando se pulsa el 
+            botón el navegador nos lleva a la dirección web indicada en el campo action y al mismo tiempo envía a esa dirección los datos que contiene 
+            el formulario.  
+            - type="reset" reestablece los controles del formulario a sus valores iniciales cuando es presionado 
+      BOTONES -->
+
+ 
+     </fieldset>
+  </form>
+</body>
+</html>
